@@ -11,6 +11,15 @@
       return Math.sqrt((a * a) + (b * b));
     }
 
+  //Regresa el angulo entre dos puntos
+    function getAngle(x1, y1, x2, y2){
+      if (x1 <= x2){
+        return Math.atan(- (y2 - y1) / (x2 - x1)) * TO_GRAD;
+      }else{
+        return (Math.atan(- (y2 - y1) / (x2 - x1)) + Math.PI) * TO_GRAD;
+      }
+    }
+
   //Regresa el tanque (TankInfo) más cercano
     function getNearestTank(base){
 
